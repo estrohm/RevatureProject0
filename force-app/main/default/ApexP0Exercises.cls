@@ -234,7 +234,7 @@ public class ApexP0Exercises {
 			accounts.add(a);
 		}
 		// Push the changes to the database as 1 DML query
-		update accounts;
+		Database.update(accounts, true);
 		
 	}
 
