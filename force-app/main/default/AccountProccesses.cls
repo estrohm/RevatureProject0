@@ -8,6 +8,8 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 public with sharing class AccountProccesses {
+
+    static Id single = '0121U000000681gQAA', joint = '0121U000000681lQAA';
     
     public static void checkOverdrawn(Id accId) {
         // SOQL query to find the relevant account
@@ -29,7 +31,7 @@ public with sharing class AccountProccesses {
         // Insert the transaction
         insert newTrans;
         // Run the other 2 methods
-        updateBalance(null);
+        updateBalance(accId);
     }
 
     public static void updateBalance(Id accId) {
@@ -43,7 +45,7 @@ public with sharing class AccountProccesses {
                 acc.Balance__c += t.Amount__c;
             }
             else {  // RecordTypeId == 'Withdrawal'
-                System.debug(t.RecordTypeId);    // Check that
+                System.debug(t.RecordTypeId);    // Verify that
                 acc.Balance__c -= t.Amount__c;
             }
         }
