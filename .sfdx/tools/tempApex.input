@@ -1,1 +1,7 @@
-ApexP0Exercises.updateAccountSize();
+Account evan = [SELECT Id, Owner__c, RecordTypeId, Balance__c FROM Account WHERE RecordTypeId = '0121U000000681gQAA'];
+System.debug(evan);
+
+AccountProcesses.checkOverdrawn(evan.Id);
+
+// Single = '0121U000000681gQAA'
+// Joint = '0121U000000681lQAA'
