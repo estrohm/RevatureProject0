@@ -195,7 +195,7 @@ public class ApexP0Exercises {
 						stack[top] = null;
 				}
 				
-				// Ignore all other characters, e.g. ( a [ xyz ] ji ) is effectively ( [ ] )
+				// Ignore all other characters, e.g. ( a [ xyz ] ji ) is effectively ([])
 				when else {
 					
 				}

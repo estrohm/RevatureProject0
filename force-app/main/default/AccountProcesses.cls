@@ -7,27 +7,40 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////
 
-public with sharing class AccountProccesses {
+public with sharing class AccountProcesses {
 
-    static Id single = '0121U000000681gQAA', joint = '0121U000000681lQAA';
+    static final Id single = '0121U000000681gQAA', joint = '0121U000000681lQAA';
+    static final Id deposit = '0121U00000067w1QAA', withdrawal = '0121U00000067w6QAA';
     
     public static void checkOverdrawn(Id accId) {
         // SOQL query to find the relevant account
         Account acc = [SELECT Id, Balance__c, Status__c FROM Account WHERE ID = :accId];
         // Check if balance is below 0
         if (acc.Balance__c < 0) {
-            // If it is, change the status and update
+            // If it is, mark it as overdrawn
             acc.Status__c = 'Overdrawn';
-            update acc;
+        } else {
+            // Otherwise, mark it as in good standing
+            acc.Status__c = 'In Good Standing';
         }
+        // Update the account to reflect the changes
+        update acc;
     }
 
-    public static void newTransaction(Id accId) {
+    public static void newTransaction(Id accId, Decimal amt) {
         // Make a new transaction
         Transaction__c newTrans = new Transaction__c();
-        // Somehow associate it with the relevant account
+        // Give it appropriate account and amount fields
         Account acc = [SELECT Id FROM Account WHERE Id = :accId];
         newTrans.Account__c = acc.Id;
+        // Give it the correct record type
+        if (amt >= 0) {
+            newTrans.RecordTypeId = deposit;
+        } else {
+            newTrans.RecordTypeId = withdrawal;
+            amt *= -1;
+        }
+        newTrans.Amount__c = amt;
         // Insert the transaction
         insert newTrans;
         // Run the other 2 methods
@@ -38,18 +51,26 @@ public with sharing class AccountProccesses {
         // SOQL query to find the relevant account
         Account acc = [SELECT Id, Balance__c FROM Account WHERE ID = :accId];
 
+        List<Transaction__c> transactions = [SELECT Amount__c, Account__r.Id, Processed__c, RecordTypeId FROM Transaction__c WHERE Account__r.Id = :accId AND Processed__c = false];
+
         // SOQL query to find all unprocessed transactions
-        for (Transaction__c t : [SELECT Amount__c, Account__r.Id, Processed__c, RecordTypeId FROM Transaction__c WHERE Account__r.Id = :accId AND Processed__c = false]) {
+        for (Transaction__c t : transactions) {
             // Sum them and add to (subtract from) balance
-            if (t.RecordTypeId == 'Deposit') {
+            // Deposit = '0121U00000067w1QAA'
+            // Withdrawal = '0121U00000067w6QAA'
+            if (t.RecordTypeId == deposit) {
                 acc.Balance__c += t.Amount__c;
             }
-            else {  // RecordTypeId == 'Withdrawal'
+            else {  // RecordTypeId == withdrawal
                 System.debug(t.RecordTypeId);    // Verify that
                 acc.Balance__c -= t.Amount__c;
             }
+            // Mark the transaction as processed
+            t.Processed__c = true;
         }
         
+        // Update the transactions
+        update transactions;
         // Update the account
         update acc;
         // Run checkOverdrawn
