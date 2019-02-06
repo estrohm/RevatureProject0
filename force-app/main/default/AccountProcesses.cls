@@ -9,6 +9,7 @@
 
 public with sharing class AccountProcesses {
 
+    // RecordTypeId constants gathered from SOQL queries
     static final Id single = '0121U000000681gQAA', joint = '0121U000000681lQAA';
     static final Id deposit = '0121U00000067w1QAA', withdrawal = '0121U00000067w6QAA';
     
@@ -56,8 +57,6 @@ public with sharing class AccountProcesses {
         // SOQL query to find all unprocessed transactions
         for (Transaction__c t : transactions) {
             // Sum them and add to (subtract from) balance
-            // Deposit = '0121U00000067w1QAA'
-            // Withdrawal = '0121U00000067w6QAA'
             if (t.RecordTypeId == deposit) {
                 acc.Balance__c += t.Amount__c;
             }

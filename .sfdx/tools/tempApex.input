@@ -1,8 +1,3 @@
-Account ian = [SELECT Id, Owner__c, Balance__c FROM Account WHERE Owner__c = 0031U000008W2XNQA0 LIMIT 1];
-System.debug(ian);
+Account ian = [SELECT Id, Name, Balance__c FROM Account WHERE Name = 'Ian\'s Checking' LIMIT 1];
 
-for(Transaction__c t : [SELECT RecordTypeId, Amount__c, Account__r.Id FROM Transaction__c WHERE Account__r.Id = :ian.Id]) {
-    System.debug(t);
-}
-
-// AccountProcesses.newTransaction(ian.Id, 300);
+AccountProcesses.newTransaction(ian.Id, 300);
