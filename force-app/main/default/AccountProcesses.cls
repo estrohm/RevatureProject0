@@ -77,44 +77,4 @@ public with sharing class AccountProcesses {
         checkOverdrawn(acc.Id);
     }
 
-    public static void classAccountExample() {
-        List<Account> accs = new List<Account>();
-        List<Opportunity> opps = new List<Opportunity>();
-
-        // Find the account with the MOST annual revenue
-        accs = [SELECT Name, AnnualRevenue FROM Account WHERE AnnualRevenue != null ORDER BY AnnualRevenue DESC LIMIT 1];
-        System.debug(accs);
-
-        // Find the account with the LEAST annual revenue
-        accs = [SELECT Name, AnnualRevenue FROM Account WHERE AnnualRevenue != null ORDER BY AnnualRevenue ASC LIMIT 1];
-        System.debug(accs);
-
-        // Find the OLDEST account
-        accs = [SELECT Name, CreatedDate FROM Account ORDER BY CreatedDate ASC LIMIT 1];
-        System.debug(accs);
-
-        // Find the account with the MOST open opportunities
-        // accs = [SELECT Name, (SELECT isCLosed, AccountName FROM Opportunity WHERE isClosed = false AND AccountName = Name) FROM Account ORDER BY c Desc LIMIT 1];
-        System.debug(accs);
-
-        // Find the account with the most valuable individual opportunity
-        //accs = [SELECT ];
-
-        // Find the account with the most valuable sum of opportunities
-
-
-
-        // Find the oldest open opportunity
-        opps = [SELECT Name, CreatedDate, IsClosed FROM Opportunity WHERE IsClosed = False ORDER BY CreatedDate ASC LIMIT 1];
-        System.debug(opps);
-
-        // Find the newest closed won opportunity
-        opps = [SELECT Name, CloseDate, IsClosed, IsWon FROM Opportunity WHERE IsClosed = True AND IsWon = True ORDER BY CreatedDate Desc LIMIT 1];
-        System.debug(opps);
-
-        // Find the most valuable closed lost opportunity
-        opps = [SELECT Name, Amount, IsClosed, IsWon FROM Opportunity WHERE IsClosed = True AND IsWon = False ORDER BY Amount Desc LIMIT 1];
-        System.debug(opps);
-    }
-
 }

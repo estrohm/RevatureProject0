@@ -1,11 +1,11 @@
-Account evan = [SELECT Id, Owner__c, RecordTypeId, Balance__c FROM Account WHERE RecordTypeId = '0121U000000681gQAA'];
-System.debug(evan);
+Account ian = [SELECT Id, Owner__c, Balance__c FROM Account WHERE Balance__c = 250];
+System.debug(ian);
 
-for(Transaction__c t : [SELECT RecordTypeId, Amount__c FROM Transaction__c]) {
+for(Transaction__c t : [SELECT RecordTypeId, Amount__c, Account__r.Id FROM Transaction__c WHERE Account__r.Id = :ian.Id]) {
     System.debug(t);
 }
 
-AccountProcesses.newTransaction(evan.Id, 300.31);
+// AccountProcesses.newTransaction(evan.Id, 300.31);
 
 // Single = '0121U000000681gQAA'
 // Joint = '0121U000000681lQAA'
