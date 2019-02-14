@@ -1,0 +1,70 @@
+{
+    "summary": {
+        "outcome": "Passed",
+        "testsRan": 2,
+        "passing": 2,
+        "failing": 0,
+        "skipped": 0,
+        "passRate": "100%",
+        "failRate": "0%",
+        "testStartTime": "Feb 14, 2019 12:39 PM",
+        "testExecutionTime": "16 ms",
+        "testTotalTime": "16 ms",
+        "commandTime": "6229 ms",
+        "hostname": "https://cunning-wolf-o6daju-dev-ed.my.salesforce.com",
+        "orgId": "00D1U000000xFcYUAU",
+        "username": "evanstrohm@cunning-wolf-o6daju.com",
+        "testRunId": "7071U00000OhOad",
+        "userId": "0051U000003CWKyQAO"
+    },
+    "tests": [
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006VhcIUAS"
+            },
+            "Id": "07M1U000006VhcIUAS",
+            "QueueItemId": "7091U000000hGg7QAE",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOadQAF",
+            "MethodName": "TestFibonacciGood",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 11,
+            "FullName": "ApexP0ExercisesTest.TestFibonacciGood"
+        },
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006VhnvUAC"
+            },
+            "Id": "07M1U000006VhnvUAC",
+            "QueueItemId": "7091U000000hGg7QAE",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOadQAF",
+            "MethodName": "TestSort",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 5,
+            "FullName": "ApexP0ExercisesTest.TestSort"
+        }
+    ]
+}

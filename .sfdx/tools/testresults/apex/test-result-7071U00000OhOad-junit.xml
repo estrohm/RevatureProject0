@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2019-02-14T12:39:41-05:00" hostname="https://cunning-wolf-o6daju-dev-ed.my.salesforce.com" tests="2" failures="0"  errors="0"  time="0.02">
+        <properties>
+            <property name="outcome" value="Passed"/>
+            <property name="testsRan" value="2"/>
+            <property name="passing" value="2"/>
+            <property name="failing" value="0"/>
+            <property name="skipped" value="0"/>
+            <property name="passRate" value="100%"/>
+            <property name="failRate" value="0%"/>
+            <property name="testStartTime" value="Feb 14, 2019 12:39 PM"/>
+            <property name="testExecutionTime" value="0.02 s"/>
+            <property name="testTotalTime" value="0.02 s"/>
+            <property name="commandTime" value="6.23 s"/>
+            <property name="hostname" value="https://cunning-wolf-o6daju-dev-ed.my.salesforce.com"/>
+            <property name="orgId" value="00D1U000000xFcYUAU"/>
+            <property name="username" value="evanstrohm@cunning-wolf-o6daju.com"/>
+            <property name="testRunId" value="7071U00000OhOad"/>
+            <property name="userId" value="0051U000003CWKyQAO"/>
+        </properties>
+        <testcase name="TestFibonacciGood" classname="ApexP0ExercisesTest" time="0.01">
+        </testcase>
+        <testcase name="TestSort" classname="ApexP0ExercisesTest" time="0.01">
+        </testcase>
+    </testsuite>
+</testsuites>

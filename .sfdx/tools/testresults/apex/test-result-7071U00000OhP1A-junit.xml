@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2019-02-14T12:55:28-05:00" hostname="https://cunning-wolf-o6daju-dev-ed.my.salesforce.com" tests="8" failures="1"  errors="0"  time="0.68">
+        <properties>
+            <property name="outcome" value="Failed"/>
+            <property name="testsRan" value="8"/>
+            <property name="passing" value="7"/>
+            <property name="failing" value="1"/>
+            <property name="skipped" value="0"/>
+            <property name="passRate" value="88%"/>
+            <property name="failRate" value="13%"/>
+            <property name="testStartTime" value="Feb 14, 2019 12:55 PM"/>
+            <property name="testExecutionTime" value="0.68 s"/>
+            <property name="testTotalTime" value="0.68 s"/>
+            <property name="commandTime" value="5.53 s"/>
+            <property name="hostname" value="https://cunning-wolf-o6daju-dev-ed.my.salesforce.com"/>
+            <property name="orgId" value="00D1U000000xFcYUAU"/>
+            <property name="username" value="evanstrohm@cunning-wolf-o6daju.com"/>
+            <property name="testRunId" value="7071U00000OhP1A"/>
+            <property name="userId" value="0051U000003CWKyQAO"/>
+            <property name="testRunCoverage" value="83%"/>
+            <property name="orgWideCoverage" value="62%"/>
+        </properties>
+        <testcase name="TestBalancedBrackets" classname="ApexP0ExercisesTest" time="0.02">
+        </testcase>
+        <testcase name="TestClosePastDueOpportunities" classname="ApexP0ExercisesTest" time="0.01">
+        </testcase>
+        <testcase name="TestFactorial" classname="ApexP0ExercisesTest" time="0.01">
+        </testcase>
+        <testcase name="TestFibonacci" classname="ApexP0ExercisesTest" time="0.01">
+        </testcase>
+        <testcase name="TestRotateLeft" classname="ApexP0ExercisesTest" time="0.01">
+        </testcase>
+        <testcase name="TestSort" classname="ApexP0ExercisesTest" time="0.01">
+        </testcase>
+        <testcase name="TestUpdateAccountSize" classname="ApexP0ExercisesTest" time="0.63">
+            <failure message="System.AssertException: Assertion Failed: Expected: Small, Actual: null"><![CDATA[Class.ApexP0ExercisesTest.TestUpdateAccountSize: line 76, column 1]]></failure>
+        </testcase>
+        <testcase name="TestUpdateCALeads" classname="ApexP0ExercisesTest" time="0.01">
+        </testcase>
+    </testsuite>
+</testsuites>

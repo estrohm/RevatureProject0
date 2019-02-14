@@ -1,0 +1,214 @@
+{
+    "summary": {
+        "outcome": "Passed",
+        "testsRan": 8,
+        "passing": 8,
+        "failing": 0,
+        "skipped": 0,
+        "passRate": "100%",
+        "failRate": "0%",
+        "testStartTime": "Feb 14, 2019 12:40 PM",
+        "testExecutionTime": "52 ms",
+        "testTotalTime": "52 ms",
+        "commandTime": "4609 ms",
+        "hostname": "https://cunning-wolf-o6daju-dev-ed.my.salesforce.com",
+        "orgId": "00D1U000000xFcYUAU",
+        "username": "evanstrohm@cunning-wolf-o6daju.com",
+        "testRunId": "7071U00000OhOiM",
+        "userId": "0051U000003CWKyQAO"
+    },
+    "tests": [
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006Vhp8UAC"
+            },
+            "Id": "07M1U000006Vhp8UAC",
+            "QueueItemId": "7091U000000hGgCQAU",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOiMQAV",
+            "MethodName": "TestBalancedBrackets",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 19,
+            "FullName": "ApexP0ExercisesTest.TestBalancedBrackets"
+        },
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006Vhp9UAC"
+            },
+            "Id": "07M1U000006Vhp9UAC",
+            "QueueItemId": "7091U000000hGgCQAU",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOiMQAV",
+            "MethodName": "TestClosePastDueOpportunities",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 5,
+            "FullName": "ApexP0ExercisesTest.TestClosePastDueOpportunities"
+        },
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006VhpAUAS"
+            },
+            "Id": "07M1U000006VhpAUAS",
+            "QueueItemId": "7091U000000hGgCQAU",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOiMQAV",
+            "MethodName": "TestFactorial",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 5,
+            "FullName": "ApexP0ExercisesTest.TestFactorial"
+        },
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006VhpBUAS"
+            },
+            "Id": "07M1U000006VhpBUAS",
+            "QueueItemId": "7091U000000hGgCQAU",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOiMQAV",
+            "MethodName": "TestFibonacci",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 5,
+            "FullName": "ApexP0ExercisesTest.TestFibonacci"
+        },
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006VhpCUAS"
+            },
+            "Id": "07M1U000006VhpCUAS",
+            "QueueItemId": "7091U000000hGgCQAU",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOiMQAV",
+            "MethodName": "TestRotateLeft",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 5,
+            "FullName": "ApexP0ExercisesTest.TestRotateLeft"
+        },
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006VhpDUAS"
+            },
+            "Id": "07M1U000006VhpDUAS",
+            "QueueItemId": "7091U000000hGgCQAU",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOiMQAV",
+            "MethodName": "TestSort",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 5,
+            "FullName": "ApexP0ExercisesTest.TestSort"
+        },
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006VhpEUAS"
+            },
+            "Id": "07M1U000006VhpEUAS",
+            "QueueItemId": "7091U000000hGgCQAU",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOiMQAV",
+            "MethodName": "TestUpdateAccountSize",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 4,
+            "FullName": "ApexP0ExercisesTest.TestUpdateAccountSize"
+        },
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v45.0/tooling/sobjects/ApexTestResult/07M1U000006VhpFUAS"
+            },
+            "Id": "07M1U000006VhpFUAS",
+            "QueueItemId": "7091U000000hGgCQAU",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7071U00000OhOiMQAV",
+            "MethodName": "TestUpdateCALeads",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v45.0/tooling/sobjects/ApexClass/01p1U00000I4n02QAB"
+                },
+                "Id": "01p1U00000I4n02QAB",
+                "Name": "ApexP0ExercisesTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 4,
+            "FullName": "ApexP0ExercisesTest.TestUpdateCALeads"
+        }
+    ]
+}
